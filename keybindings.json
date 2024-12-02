@@ -1,0 +1,72 @@
+[
+  // NAVIGATION
+  // Terminal 
+  // Focus on terminal 
+  {
+    "key": "alt+t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+      "key":     "alt+r",
+      "command": "workbench.action.terminal.focus"
+  },
+  {
+      "key":     "alt+r",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when":    "terminalFocus"
+  },
+  // Navigate inside Terminal 
+  // TODO
+  // FILE TREE
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "alt+e"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "alt+e",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "workbench.action.focusSideBar",
+    "key": "alt+w"
+  },
+  {
+    "command": "workbench.action.focusActiveEditorGroup",
+    "key": "alt+w", 
+    "when": "filesExplorerFocus"
+  },
+  // Navigate inside File Tree
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  // EXTRA
+  {
+    "key": "alt+space",
+    "command": "workbench.action.chat.open"
+  },
+  {
+    "key": "alt+space",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorFocus"
+  },
+  ]
