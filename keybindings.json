@@ -7,6 +7,7 @@
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
   },
+  // Switch between terminal and code
   {
       "key":     "alt+r",
       "command": "workbench.action.terminal.focus"
@@ -15,6 +16,18 @@
       "key":     "alt+r",
       "command": "workbench.action.focusActiveEditorGroup",
       "when":    "terminalFocus"
+  },
+  // Cycle through active tabs 
+  {
+    "key": "alt+tab",
+    "command": "workbench.action.terminal.focusNext",
+    "when":    "terminalFocus"
+  },
+  // New tab
+  {
+    "key": "alt+n", 
+    "command": "workbench.action.terminal.new",
+    "when":    "terminalFocus"
   },
   // Editor Naviagation
   {
@@ -63,6 +76,7 @@
     "command": "runCommands",
     "args": {
       "commands": [
+        "workbench.action.toggleActivityBarVisibility",
         "workbench.action.toggleSidebarVisibility",
         "workbench.files.action.focusFilesExplorer"
       ]
@@ -74,6 +88,7 @@
     "command": "runCommands",
     "args": {
       "commands": [
+        "workbench.action.toggleActivityBarVisibility",
         "workbench.action.toggleSidebarVisibility",
         "workbench.action.focusActiveEditorGroup"
       ]
@@ -83,8 +98,14 @@
   {
     "key": "space e",
     "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.action.toggleSidebarVisibility",
+      ]
+    },
+  }, 
   {
     "key": "tab",
     "command": "workbench.action.nextEditorInGroup",
@@ -177,7 +198,6 @@
     "command": "editor.action.goToImplementation",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
-
   // File Explorer
   {
     "key": "r",
@@ -205,27 +225,62 @@
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "a",
+    "key": "n",
     "command": "explorer.newFile",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "shift-a",
+    "key": "shift-n",
     "command": "explorer.newFolder",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "s",
-    "command": "explorer.openToSide",
+    "command": "runCommands",
+    "args": {
+    "commands": [
+        "explorer.openToSide",
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.action.toggleSidebarVisibility"
+      ],
+    },
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
+  {
+    "key": "enter",
+    "command": "runCommands",
+    "args": {
+    "commands": [
+        "explorer.openAndPassFocus",
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.action.toggleSidebarVisibility"
+      ],
+    },
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  // COPILOT
   {
     "key": "alt+c",
     "command": "workbench.panel.chat",
     "when": "workbench.panel.chat.view.copilot.active"
   },
+
+  // GENERAL
   {
     "key": "alt+j",
     "command": "workbench.action.navigateBack",
+  } ,
+  // GLOBAL SEARCH
+  // TODO: Fix this 
+  {
+    "key": "space s",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.view.search.focus"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
   },
   ]
