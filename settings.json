@@ -1,0 +1,76 @@
+{
+  "workbench.colorTheme": "Everforest Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "gitlens.hovers.currentLine.over": "line",
+  "autoDocstring.quoteStyle": "'''",
+  "autoDocstring.docstringFormat": "sphinx",
+  "keyboard.dispatch": "keyCode",
+  "window.titleBarStyle": "custom",
+  "editor.rulers": [
+    100
+  ],
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "outline.showArrays": false,
+  "outline.showBooleans": false,
+  "outline.showConstants": false,
+  "outline.showEnumMembers": false,
+  "outline.showEnums": false,
+  "outline.showEvents": false,
+  "outline.showFields": false,
+  "outline.showFiles": false,
+  "outline.showKeys": false,
+  "outline.showNamespaces": false,
+  "outline.showNull": false,
+  "outline.showNumbers": false,
+  "outline.showObjects": false,
+  "outline.showOperators": false,
+  "outline.showProperties": false,
+  "outline.showStrings": false,
+  "outline.showStructs": false,
+  "outline.showTypeParameters": false,
+  "outline.showVariables": false,
+  "vim.statusBarColors.easymotionmode": "",
+  "vim.statusBarColors.easymotioninputmode": "",
+  "vim.handleKeys": {
+    "<C-p>": false
+  },
+  "editor.suggest.insertMode": "replace",
+  "editor.linkedEditing": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "launch": {},
+  "[json]": {},
+  "breadcrumbs.enabled": false,
+  "update.showReleaseNotes": false,
+  "zenMode.hideLineNumbers": false,
+  "editor.lineNumbers": "relative",
+  "vim.hlsearch": true,
+  "files.associations": {
+    "*.rmd": "markdown"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "explorer.confirmDelete": false,
+  "everforest.darkContrast": "hard",
+  "projectManager.tags": [],
+  "projectManager.git.baseFolders": [
+    "/home/tim/Documents/Code/"
+  ],
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "window.menuBarVisibility": "compact",
+  "terminal.integrated.tabs.enabled": true,
+  "search.searchOnType": false,
+  "workbench.activityBar.location": "hidden"
+}
