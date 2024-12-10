@@ -247,7 +247,7 @@
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "enter",
+    "key": "space a",
     "command": "runCommands",
     "args": {
     "commands": [
@@ -271,16 +271,52 @@
     "command": "workbench.action.navigateBack",
   } ,
   // GLOBAL SEARCH
-  // TODO: Fix this 
+  // TODO
+  // DEBUGGING
+  // TODO
   {
-    "key": "space s",
+    "key": "space o d",
+    "command": "runCommands",
+    "args": {
+    "commands": [
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.action.toggleSidebarVisibility",
+        "debug.openView"
+      ],
+    },
+    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)",
+  },
+  {
+    "key": "space o d",
     "command": "runCommands",
     "args": {
       "commands": [
         "workbench.action.toggleActivityBarVisibility",
-        "workbench.view.search.focus"
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
+    "when": "sideBarFocus && !inputFocus"
+  },
+  {
+    "key": "space e",
+    "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.action.toggleSidebarVisibility",
+      ]
+    },
+  },
+  {
+    "key": "space t b",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space a", 
+    "command": "workbench.action.toggleActivityBarVisibility", 
+    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   ]
