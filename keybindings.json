@@ -84,6 +84,16 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
   },
   {
+    "key": "space r",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
+  },
+  {
     "key": "space e",
     "command": "runCommands",
     "args": {
@@ -159,7 +169,12 @@
   },
   // Coding
   {
-    "key": "shift-k",
+    "key": "space c",
+    "command": "editor.action.commentLine",
+    "when": "vim.mode == 'Visual' && editorTextFocus"
+  },
+  {
+    "key": "space i",
     "command": "editor.action.showHover",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
@@ -240,6 +255,18 @@
     "args": {
     "commands": [
         "explorer.openToSide",
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.action.toggleSidebarVisibility"
+      ],
+    },
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "o",
+    "command": "runCommands",
+    "args": {
+    "commands": [
+        "explorer.openAndPassFocus",
         "workbench.action.toggleActivityBarVisibility",
         "workbench.action.toggleSidebarVisibility"
       ],
